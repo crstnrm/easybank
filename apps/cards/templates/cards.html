@@ -1,0 +1,26 @@
+<style>
+    code {
+        display: block;
+        background-color: whitesmoke;
+        border-radius: 4px;
+        padding: 16px;
+    }
+</style>
+
+<h3> Hi! Let's try some links</h3>
+
+<p>Example login</p>
+<code>
+    curl \
+    -X POST \
+    -H "Content-Type: application/json" \
+    -d '{"username": "admin", "password": "1234"}' \
+    http://localhost:8000/api/token/
+</code>
+
+<p>Example how to call some resources with authorization required.</p>
+<code>
+    curl \
+      -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3BrIjoxLCJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiY29sZF9zdHVmZiI6IuKYgyIsImV4cCI6MTIzNDU2LCJqdGkiOiJmZDJmOWQ1ZTFhN2M0MmU4OTQ5MzVlMzYyYmNhOGJjYSJ9.NHlztMGER7UADHZJlxNG0WSi22a2KaYSfd1S-AuT7lU" \
+      http://localhost:8000/cards
+</code>

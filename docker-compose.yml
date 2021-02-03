@@ -1,0 +1,30 @@
+version: '3'
+services:
+  postgres:
+    restart: on-failure
+    image: easybank-postgres
+    build:
+      context: .
+      dockerfile: Dockerfile.postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    ports:
+      - 5494:5432
+    environment:
+      - POSTGRES_DB=easybank
+      - POSTGRES_USER=easybank
+      - POSTGRES_PASSWORD=easybank
+  worker:
+    image: easybank-worker
+    build: .
+    volumes:
+      - .:/easybank
+    env_file:
+      - ./.env
+    ports:
+      - 8000:8000
+    depends_on:
+      - postgres
+
+volumes:
+  postgres_data:

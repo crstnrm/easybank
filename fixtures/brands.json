@@ -1,0 +1,26 @@
+[
+    {
+        "model": "cards.brand",
+        "pk": 1,
+        "fields": {
+            "name": "SQUA",
+            "short_name": "SQUA"
+        }
+    },
+    {
+        "model": "cards.brand",
+        "pk": 2,
+        "fields": {
+            "name": "SCO",
+            "short_name": "SCO"
+        }
+    },
+    {
+        "model": "cards.brand",
+        "pk": 3,
+        "fields": {
+            "name": "PERE",
+            "short_name": "PERE"
+        }
+    }
+]
